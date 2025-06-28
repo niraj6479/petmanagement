@@ -1,0 +1,66 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Menu } from "lucide-react"; // Or use your own SVG
+import logo from "../assets/icon.svg";
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  return (
+    <nav className="w-full bg-[#25282c] rounded-4xl">
+      <div className="px-6 py-3 mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <img
+          src={logo}
+          alt="logo"
+          onClick={() => navigate("/")}
+          className="cursor-pointer"
+        />
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8 items-center text-white font-medium text-[16px]">
+          <Link to="/feature" className="cursor-pointer">
+            Features
+          </Link>
+          <Link to="/blog" className="cursor-pointer">
+            Blogs
+          </Link>
+          <Link
+            to="contact"
+            className="text-[#6f3201] bg-[#ffba61] rounded-4xl py-1 px-3 font-bold text-[14px] cursor-pointer"
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Menu size={28} />
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden flex flex-col gap-4 text-white p-5">
+          <Link to="feature" className="text-white text-[16px] font-medium">
+            Features
+          </Link>
+          <Link to="/blog" className="text-white text-[16px] font-medium">
+            Blogs
+          </Link>
+          <Link
+            to="contact"
+            className="text-[#6f3201] bg-[#ffba61] rounded-full px-5 py-2 text-center font-bold text-[14px] w-fit"
+          >
+            Contact Us
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
+}
