@@ -1,7 +1,7 @@
 import React from "react";
 import dogbg from "../assets/dogbg.svg";
-import { FaApple } from "react-icons/fa";
-import { IoLogoGooglePlaystore } from "react-icons/io5";
+// import { FaApple } from "react-icons/fa";
+// import { IoLogoGooglePlaystore } from "react-icons/io5";
 
 import img1 from "../assets/dog1.png";
 import img2 from "../assets/dog2.png";
@@ -12,51 +12,40 @@ import img5 from "../assets/dog5.png";
 import PetJourney from "./PetJourney";
 import StoriesTip from "./StoriesTip";
 import ContactUs from "./ContactUs";
+import DownloadButtons from "./DownloadButtons";
 // import Footer from "./Footer";
 
 export default function BodyContent() {
   return (
     <div>
-      <div className="relative">
-        <img src={dogbg} className="w-full" />
-        <div className="absolute top-15 left-15">
-          <p className="font-black text-[20px] sm:text-[60px] md:text-[90px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent leading-[1.1]">
+      <div className="relative w-full">
+        {/* Background Image */}
+        <img src={dogbg} alt="Dog" className="w-full h-auto object-cover" />
+
+        {/* Text on Image (Positioned for md+ screens) */}
+        <div className="absolute top-6 sm:top-16 left-4 sm:left-10 max-w-[95%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%]">
+          <p className="font-black text-[20px] sm:text-[40px] md:text-[56px] lg:text-[72px] xl:text-[90px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent leading-snug sm:leading-tight break-words">
             Care for your pet <br />
             like never before.
           </p>
-          <p className="mt-3 font-medium text-[14px] sm:text-[18px] md:text-[24px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent">
-            Doommi turns everyday pet care into an experience —<br /> effortless
-            health logs, smart reminders, and heartfelt <br />
+
+          <p className="mt-3 font-medium text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-white leading-relaxed sm:leading-snug">
+            Doommi turns everyday pet care into an experience —
+            <br className="hidden sm:block" />
+            effortless health logs, smart reminders, and heartfelt{" "}
+            <br className="hidden sm:block" />
             memories, all in one elegant app.
           </p>
         </div>
 
-        <div className="absolute bottom-0 md:bottom-10 right-0 sm:right-0 sm:flex sm:gap-5 flex-col sm:flex-row items-start sm:items-center">
-          <button className="border border-[#acaaad] flex items-center justify-center gap-2 px-6 py-2 rounded-4xl w-[200px] mb-3 sm:mb-0">
-            <FaApple className="w-6 h-6 text-black" />
-            <div>
-              <p className="text-black font-bold text-[9px] text-start">
-                Download on the Store
-                <br />
-                <span className="text-black font-semibold text-xl leading-[1.1]">
-                  App Store
-                </span>
-              </p>
-            </div>
-          </button>
+        {/* Buttons for large screens (absolute over image) */}
+        <div className="hidden md:flex absolute bottom-5 right-10 gap-5">
+          <DownloadButtons />
+        </div>
 
-          <button className="border border-[#acaaad] flex items-center justify-center gap-2 px-6 py-2 rounded-4xl w-[200px]">
-            <IoLogoGooglePlaystore className="w-6 h-6 text-black" />
-            <div>
-              <p className="text-black font-bold text-[9px] text-start">
-                GET IT ON
-                <br />
-                <span className="text-black font-semibold text-xl leading-[1.1]">
-                  Google Play
-                </span>
-              </p>
-            </div>
-          </button>
+        {/* Buttons below image for small screens */}
+        <div className="block md:hidden mt-6 px-6">
+          <DownloadButtons />
         </div>
       </div>
 
@@ -110,7 +99,7 @@ export default function BodyContent() {
                 It’s a Promise
               </span>
             </p>
-            <p className="text-black mb-2 font-medium text-[20px] mt-4">
+            <p className="text-black mb-2 font-medium text-[20px] mt-4 text-justify">
               Doommi was born from the story of Doommi, a dog who filled our
               lives with joy, chaos, and unconditional love. When Doommi passed,
               we realized how much of his journey — his favorite meals, his

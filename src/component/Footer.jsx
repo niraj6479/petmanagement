@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { FaApple } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import logo from "../assets/icon.svg"; // update your path if needed
+import DownloadButtons from "./DownloadButtons";
 
 const Footer = () => {
    const navigate = useNavigate();
@@ -36,7 +37,7 @@ const Footer = () => {
         </div>
 
         {/* App Download Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        {/* <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <button className="border border-[#acaaad] flex items-center gap-2 px-4 py-1 rounded-full w-[230px] bg-white">
             <FaApple className="w-6 h-6 text-black" />
             <div className="text-left leading-tight">
@@ -54,7 +55,9 @@ const Footer = () => {
               <p className="text-black font-semibold text-lg">Google Play</p>
             </div>
           </button>
-        </div>
+        </div> */}
+
+        <DownloadButtons />
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 text-xl text-white mt-4">

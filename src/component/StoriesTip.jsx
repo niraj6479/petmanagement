@@ -9,7 +9,7 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 2, // or 3 depending on how many you want visible
+  slidesToShow: 2,
   slidesToScroll: 1,
   arrows: true,
   responsive: [
@@ -21,53 +21,52 @@ const settings = {
     },
   ],
 };
+
 export default function StoriesTip() {
   return (
-    <div>
-      <div className="bg-[#fcfaf8] mt-10 px-6 py-10 rounded-[40px]">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+    <div className="w-full px-4">
+      <div className="bg-[#fcfaf8] mt-10 p-6 md:p-10 rounded-[40px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           {/* Left Side - Text */}
-          <div className="col-span-12 md:col-span-8">
-            <p className="font-normal text-xl text-gray-600 mb-2">
+          <div className="md:col-span-7 w-full">
+            <p className="text-base text-gray-600 mb-2">
               Blog – The Pet Journal by Doommi
             </p>
-            <p className="font-bold text-4xl sm:text-5xl lg:text-6xl bg-gradient-to-r from-[#6f3201] to-[#ffba61] bg-clip-text text-transparent leading-tight">
+            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-[#6f3201] to-[#ffba61] bg-clip-text text-transparent leading-tight break-words">
               Stories, Tips, and <br />
-              Wellness Wisdom — <br /> Straight from the Heart
-            </p>
-
-            <p className="text-gray-700 text-lg mt-6">
+              Wellness Wisdom — <br />
+              Straight from the Heart
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg mt-6 text-justify break-words">
               Welcome to The Pet Journal, Doommi’s storytelling space. Here, we
               share everything from real pet stories to health guides, adoption
               tips, and wellness insights — all written with love, just like
               everything we do.
             </p>
-
-            <p className="text-gray-700 text-lg mt-3">
+            <p className="text-gray-700 text-base sm:text-lg mt-3 text-justify break-words">
               Because behind every bark, purr, or playful zoomie, there’s a
               story worth telling.
             </p>
-
-            <p className="mt-4 text-[#6f3201] font-semibold text-lg underline cursor-pointer">
+            <p className="mt-4 text-[#6f3201] font-semibold text-base underline cursor-pointer">
               View More
             </p>
           </div>
 
-          {/* Right Side - Image */}
-          <div className="col-span-12 md:col-span-4">
+          {/* Right Side - Slider */}
+          <div className="md:col-span-5 w-full">
             <Slider {...settings}>
-              <div className="px-2">
+              <div className="px-1 outline-0">
                 <img
                   src={blogStores}
                   alt="Blog visual"
-                  className="w-full h-[500px] object-cover rounded-[30px]"
+                  className="w-full h-[400px] object-cover rounded-[30px]"
                 />
               </div>
-              <div className="px-2">
+              <div className="px-1 outline-0">
                 <img
                   src={blogStores2}
                   alt="Blog visual"
-                  className="w-full h-[500px] object-cover rounded-[30px]"
+                  className="w-full h-[400px] object-cover rounded-[30px]"
                 />
               </div>
             </Slider>
