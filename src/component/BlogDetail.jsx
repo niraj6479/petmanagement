@@ -61,7 +61,7 @@ export default function BlogDetail() {
           20/02/2024
         </p>
 
-        <p className="font-normal text-xl text-black mt-5">
+        <p className="font-normal text-xl text-black mt-5 text-justify">
           Proper nutrition for pregnant dogs is vital for the health of both the
           mother and her developing puppies. At DogingtonPost, we understand the
           importance of providing expectant canine moms with the right balance
@@ -78,7 +78,7 @@ export default function BlogDetail() {
           Calorie Requirements for Expecting Canines
         </p>
 
-        <p className="font-normal text-xl text-black mt-5">
+        <p className="font-normal text-xl text-black mt-5 text-justify">
           Pregnant dogs have specific nutritional needs that evolve throughout
           their gestation period. As the pregnancy progresses, a dog’s calorie
           requirements increase significantly. Veterinary nutritionists
