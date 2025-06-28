@@ -29,8 +29,14 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base text-gray-300">
-          <a href="/feature">Features</a>
-          <a href="/blog">Blogs</a>
+              <Link to="/feature" className="cursor-pointer">
+            Features
+          </Link>
+          <Link to="/blog" className="cursor-pointer">
+            Blogs
+          </Link>
+          {/* <a href="/feature">Features</a>
+          <a href="/blog">Blogs</a> */}
           <a href="#">Contact Us</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
