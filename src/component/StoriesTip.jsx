@@ -24,7 +24,7 @@ const settings = {
 
 export default function StoriesTip() {
   return (
-    <div className="w-full px-4">
+    <div className="w-full">
       <div className="bg-[#fcfaf8] mt-10 p-6 md:p-10 rounded-[40px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           {/* Left Side - Text */}
