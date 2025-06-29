@@ -38,7 +38,7 @@ const blogPosts = [
 export default function BlogDetail() {
   const navigate = useNavigate();
   return (
-    <div className="p-6">
+    <div className="mt-3">
       <div className="flex items-center gap-2">
         <img
           src={backIcon}
