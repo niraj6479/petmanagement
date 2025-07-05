@@ -15,11 +15,12 @@ export default function PetJourney() {
     >
       {/* Text Content */}
       <div className="max-w-screen-xl mx-auto text-right">
-        <p className="bg-gradient-to-r from-[#ffba61] to-[#6f3201] bg-clip-text text-transparent font-bold text-3xl sm:text-5xl lg:text-7xl leading-tight">
+        <p className="bg-gradient-to-r from-[#ffba61] to-[#6f3201] bg-clip-text text-transparent font-bold text-3xl sm:text-5xl lg:text-7xl leading-[1.3] sm:leading-[1.2] md:leading-[1.1] lg:leading-[1.05] xl:leading-[1] text-right break-words">
           Your Pet’s Journey,
           <br />
           <span className="block">Just Smarter.</span>
         </p>
+
         <p className="font-medium text-base sm:text-xl lg:text-2xl text-black mt-3">
           With Doommi, you’re not just logging —<br />
           <span className="block">you’re understanding.</span>
