@@ -80,7 +80,7 @@ export default function Navbar() {
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="cursor-pointer"
+            className="cursor-pointer text-left text-white text-[16px] font-medium w-full"
           >
             Features
           </button>
