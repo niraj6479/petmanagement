@@ -64,7 +64,9 @@ const Footer = () => {
           </button>
         </div> */}
 
-        <DownloadButtons />
+   <div className="flex justify-center">
+         <DownloadButtons />
+   </div>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 text-xl text-white mt-4">

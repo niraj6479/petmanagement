@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react"; // Or use your own SVG
 import logo from "../assets/icon.svg";
 
 export default function Navbar() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100); // wait for DOM to load
+      }
+    }
+  }, []);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   return (
@@ -20,9 +31,19 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center text-white font-medium text-[16px]">
-          <Link to="/feature" className="cursor-pointer">
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#feature";
+              } else {
+                const el = document.getElementById("feature");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cursor-pointer"
+          >
             Features
-          </Link>
+          </button>
           <Link to="/blog" className="cursor-pointer">
             Blogs
           </Link>
@@ -47,9 +68,22 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col gap-4 text-white p-5">
-          <Link to="feature" className="text-white text-[16px] font-medium">
+          {/* <Link to="feature" className="text-white text-[16px] font-medium">
             Features
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#feature";
+              } else {
+                const el = document.getElementById("feature");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cursor-pointer"
+          >
+            Features
+          </button>
           <Link to="/blog" className="text-white text-[16px] font-medium">
             Blogs
           </Link>

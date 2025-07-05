@@ -20,11 +20,20 @@ export default function BodyContent() {
     <div>
       <div className="relative w-full">
         {/* Background Image */}
-        <img src={dogbg} alt="Dog" className="w-full h-auto object-cover" />
+        <img
+          src={dogbg}
+          alt="Dog"
+          className="w-full h-auto object-cover md:mt-0 mt-3"
+        />
 
         {/* Text on Image (Positioned for md+ screens) */}
         <div className="absolute top-6 sm:top-16 left-4 sm:left-10 max-w-[95%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%]">
-          <p className="font-black text-[20px] sm:text-[40px] md:text-[56px] lg:text-[72px] xl:text-[90px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent leading-snug sm:leading-tight break-words">
+          {/* <p className="font-black text-[20px] sm:text-[40px] md:text-[56px] lg:text-[72px] xl:text-[78px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent leading-snug sm:leading-tight break-words">
+            Care for your pet <br />
+            like never before.
+          </p> */}
+
+          <p className="font-black text-[20px] sm:text-[40px] md:text-[56px] lg:text-[72px] xl:text-[78px] bg-gradient-to-r from-white to-[#ffe0b8] bg-clip-text text-transparent leading-[1.2] sm:leading-[1.2] md:leading-[1.1] lg:leading-[1.05] xl:leading-[1] break-words">
             Care for your pet <br />
             like never before.
           </p>
@@ -39,7 +48,7 @@ export default function BodyContent() {
         </div>
 
         {/* Buttons for large screens (absolute over image) */}
-        <div className="hidden md:flex absolute bottom-5 right-10 gap-5">
+        <div className="hidden md:flex absolute bottom-14 right-10 gap-5">
           <DownloadButtons />
         </div>
 
@@ -52,47 +61,49 @@ export default function BodyContent() {
       <div className="bg-[#fcfaf8] rounded-[60px] mt-10">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Image Grid */}
-          <div className="grid grid-cols-4 gap-4">
-            {/* Left Column */}
-            <div className="flex flex-col gap-4">
-              <img
-                src={img1}
-                className="rounded-tl-[60px] object-cover h-[180px] w-full"
-                alt="dog1"
-              />
-              <img
-                src={img2}
-                className="rounded-bl-[60px] object-cover h-[100px] w-full"
-                alt="dog2"
-              />
-            </div>
+          <div className="w-full">
+            <div className="grid grid-cols-4 gap-4">
+              {/* Left Column */}
+              <div className="flex flex-col gap-4">
+                <img
+                  src={img1}
+                  className="rounded-tl-[60px] object-cover h-[180px] w-full"
+                  alt="dog1"
+                />
+                <img
+                  src={img2}
+                  className="rounded-bl-[60px] object-cover h-[100px] w-full"
+                  alt="dog2"
+                />
+              </div>
 
-            {/* Middle Column */}
-            <div className="flex col-span-2 items-center">
-              <img
-                src={img3}
-                className="object-cover h-[299px] w-full rounded-md"
-                alt="dog3"
-              />
-            </div>
+              {/* Middle Column */}
+              <div className="flex col-span-2 items-center">
+                <img
+                  src={img3}
+                  className="object-cover h-[299px] w-full rounded-md"
+                  alt="dog3"
+                />
+              </div>
 
-            {/* Right Column */}
-            <div className="flex flex-col gap-4">
-              <img
-                src={img4}
-                className="object-cover h-[180px] w-full"
-                alt="dog4"
-              />
-              <img
-                src={img5}
-                className="object-cover h-[100px] w-full"
-                alt="dog5"
-              />
+              {/* Right Column */}
+              <div className="flex flex-col gap-4">
+                <img
+                  src={img4}
+                  className="object-cover h-[180px] w-full rounded-b-2xl"
+                  alt="dog4"
+                />
+                <img
+                  src={img5}
+                  className="object-cover h-[100px] w-full rounded-t-2xl"
+                  alt="dog5"
+                />
+              </div>
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col justify-center lg:ps-10">
+          <div className="flex flex-col justify-center lg:ps-10 p-6">
             <p className="text-2xl font-semibold text-black">
               More Than an App <br />
               <span className="bg-gradient-to-r from-[#6f3201] to-[#ffba61] bg-clip-text text-transparent italic font-medium text-4xl">

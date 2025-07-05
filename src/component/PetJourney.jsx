@@ -10,6 +10,7 @@ export default function PetJourney() {
   return (
     <div
       className="w-full bg-cover bg-center bg-no-repeat rounded-[60px] overflow-hidden px-4 py-10 mt-10"
+      id="feature"
       style={{ backgroundImage: `url(${manwithdog})` }}
     >
       {/* Text Content */}
@@ -25,12 +26,43 @@ export default function PetJourney() {
         </p>
 
         {/* Feature Cards */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[pet1, pet2, pet3, pet4].map((img, idx) => (
             <div
               key={idx}
               className="rounded-[60px] overflow-hidden shadow-md"
             >
+              <img
+                src={img}
+                alt={`pet${idx + 1}`}
+                className="w-full h-[280px] sm:h-[300px] object-cover rounded-[60px]"
+              />
+            </div>
+          ))}
+        </div> */}
+
+        {/* Mobile - Horizontal Scroll */}
+        <div className="block lg:hidden overflow-x-auto">
+          <div className="flex space-x-4 px-2">
+            {[pet1, pet2, pet3, pet4].map((img, idx) => (
+              <div
+                key={idx}
+                className="min-w-[250px] flex-shrink-0 rounded-[60px] overflow-hidden shadow-md"
+              >
+                <img
+                  src={img}
+                  alt={`pet${idx + 1}`}
+                  className="w-full h-[280px] object-cover rounded-[60px]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop - Grid Layout */}
+        <div className="hidden lg:grid mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[pet1, pet2, pet3, pet4].map((img, idx) => (
+            <div key={idx} className="rounded-[60px] overflow-hidden shadow-md">
               <img
                 src={img}
                 alt={`pet${idx + 1}`}
