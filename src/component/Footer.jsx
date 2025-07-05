@@ -15,7 +15,7 @@ import DownloadButtons from "./DownloadButtons";
 const Footer = () => {
    const navigate = useNavigate();
   return (
-    <footer className="bg-[#25282c] text-white py-10 px-4 mt-10 md:mt-10">
+    <footer className="bg-[#25282c] text-white py-10 px-5 mt-10 md:mt-10">
       <div className="max-w-7xl mx-auto text-center space-y-8">
         {/* Logo */}
         <div>

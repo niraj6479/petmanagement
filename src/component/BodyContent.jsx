@@ -53,7 +53,7 @@ export default function BodyContent() {
         </div>
 
         {/* Buttons below image for small screens */}
-        <div className="block md:hidden mt-6 px-6">
+        <div className="block md:hidden mt-6">
           <DownloadButtons />
         </div>
       </div>
