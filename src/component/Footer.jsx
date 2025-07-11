@@ -13,7 +13,7 @@ import logo from "../assets/icon.svg"; // update your path if needed
 import DownloadButtons from "./DownloadButtons";
 
 const Footer = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#25282c] text-white py-10 px-5 mt-10 md:mt-10">
       <div className="max-w-7xl mx-auto text-center space-y-8">
@@ -29,15 +29,43 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base text-gray-300">
-          <Link to="/feature" className="cursor-pointer">
+          {/* <Link to="/feature" className="cursor-pointer">
             Features
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#feature";
+              } else {
+                const el = document.getElementById("feature");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cursor-pointer"
+          >
+            Features
+          </button>
           <Link to="/blog" className="cursor-pointer">
             Blogs
           </Link>
           {/* <a href="/feature">Features</a>
           <a href="/blog">Blogs</a> */}
-          <a href="#">Contact Us</a>
+
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#contactus";
+              } else {
+                const el = document.getElementById("contactus");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="cursor-pointer"
+          >
+            Contact Us
+          </button>
+
+          {/* <a href="#">Contact Us</a> */}
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
           <a href="#">FAQ</a>
@@ -64,9 +92,9 @@ const Footer = () => {
           </button>
         </div> */}
 
-   <div className="flex justify-center">
-         <DownloadButtons />
-   </div>
+        <div className="flex justify-center">
+          <DownloadButtons />
+        </div>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 text-xl text-white mt-4">

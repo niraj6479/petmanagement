@@ -47,12 +47,27 @@ export default function Navbar() {
           <Link to="/blog" className="cursor-pointer">
             Blogs
           </Link>
-          <Link
+
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#contactus";
+              } else {
+                const el = document.getElementById("contactus");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="text-[#6f3201] bg-[#ffba61] rounded-full px-5 py-2 text-center font-bold text-[14px] w-fit"
+          >
+            Contact Us
+          </button>
+
+          {/* <Link
             to="contact"
             className="text-[#6f3201] bg-[#ffba61] rounded-4xl py-1 px-3 font-bold text-[14px] cursor-pointer"
           >
             Contact Us
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -87,12 +102,27 @@ export default function Navbar() {
           <Link to="/blog" className="text-white text-[16px] font-medium">
             Blogs
           </Link>
-          <Link
+
+          <button
+            onClick={() => {
+              if (window.location.pathname !== "/") {
+                window.location.href = "/#contactus";
+              } else {
+                const el = document.getElementById("contactus");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="text-[#6f3201] bg-[#ffba61] rounded-full px-5 py-2 text-center font-bold text-[14px] w-fit"
+          >
+            Contact Us
+          </button>
+
+          {/* <Link
             to="contact"
             className="text-[#6f3201] bg-[#ffba61] rounded-full px-5 py-2 text-center font-bold text-[14px] w-fit"
           >
             Contact Us
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>
