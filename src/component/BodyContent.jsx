@@ -36,21 +36,26 @@ export default function BodyContent() {
       )}
 
       {/* ✅ Website Content */}
-      <div className={`transition-opacity duration-700 ${isLoading ? "opacity-0" : "opacity-100"}`}>
+      <div
+        className={`transition-opacity duration-700 ${
+          isLoading ? "opacity-0" : "opacity-100"
+        }`}
+      >
         <div className="relative w-full">
           {/* Background Image */}
           <img
             src={dogbg}
             alt="Background"
             onLoad={handleImageLoad}
-            className="w-full h-auto object-cover md:mt-3 mt-3"
+            // className="w-full h-auto object-cover md:mt-3 mt-3"
+            className="w-full h-[300px] sm:h-[500px] md:h-auto object-cover md:mt-3 mt-3 rounded-4xl"
           />
 
           {/* Foreground Dog Image */}
           <img
             src={dogimg}
             alt="Dog"
-            className="w-full h-auto object-cover md:mt-0 mt-3 absolute md:bottom-[45px] bottom-[82px]"
+            className="w-full h-auto object-cover md:mt-0 mt-3 absolute md:bottom-[45px] bottom-[94px]"
           />
 
           {/* Text */}
@@ -85,15 +90,35 @@ export default function BodyContent() {
             <div className="w-full">
               <div className="grid grid-cols-4 gap-4">
                 <div className="flex flex-col gap-4">
-                  <img src={img1} className="rounded-tl-[60px] object-cover h-[180px] w-full" alt="dog1" />
-                  <img src={img2} className="rounded-bl-[60px] object-cover h-[100px] w-full" alt="dog2" />
+                  <img
+                    src={img1}
+                    className="rounded-tl-[60px] object-cover h-[180px] w-full"
+                    alt="dog1"
+                  />
+                  <img
+                    src={img2}
+                    className="rounded-bl-[60px] object-cover h-[100px] w-full"
+                    alt="dog2"
+                  />
                 </div>
                 <div className="flex col-span-2 items-center">
-                  <img src={img3} className="object-cover h-[299px] w-full rounded-md" alt="dog3" />
+                  <img
+                    src={img3}
+                    className="object-cover h-[299px] w-full rounded-md"
+                    alt="dog3"
+                  />
                 </div>
                 <div className="flex flex-col gap-4">
-                  <img src={img4} className="object-cover h-[180px] w-full rounded-b-2xl" alt="dog4" />
-                  <img src={img5} className="object-cover h-[100px] w-full rounded-t-2xl" alt="dog5" />
+                  <img
+                    src={img4}
+                    className="object-cover h-[180px] w-full rounded-b-2xl"
+                    alt="dog4"
+                  />
+                  <img
+                    src={img5}
+                    className="object-cover h-[100px] w-full rounded-t-2xl"
+                    alt="dog5"
+                  />
                 </div>
               </div>
             </div>
@@ -107,11 +132,15 @@ export default function BodyContent() {
                 </span>
               </p>
               <p className="text-black mb-2 font-medium text-[20px] mt-4 text-justify">
-                Doommi was born from the story of Doommi, a dog who filled our lives with joy, chaos, and unconditional love.
-                When Doommi passed, we realized how much of his journey — his favorite meals, his health struggles, the happy
-                memories — had never been captured in one place.
+                Doommi was born from the story of Doommi, a dog who filled our
+                lives with joy, chaos, and unconditional love. When Doommi
+                passed, we realized how much of his journey — his favorite
+                meals, his health struggles, the happy memories — had never been
+                captured in one place.
               </p>
-              <p className="text-black font-medium text-[20px]">We built Doommi to change that.</p>
+              <p className="text-black font-medium text-[20px]">
+                We built Doommi to change that.
+              </p>
             </div>
           </div>
         </div>
